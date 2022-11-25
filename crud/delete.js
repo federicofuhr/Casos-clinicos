@@ -28,9 +28,12 @@ const deleteClinicCases = async () => {
     const result = await ClinicCase.deleteMany()
 }
 
-deletePatientBy()
-deleteMedicBy()
-deleteClinicCaseBy()
-deletePatients()
-deleteMedics()
-deleteClinicCases()
+
+module.exports = {
+    deletePatientBy,
+    deleteMedicBy,
+    deleteClinicCaseBy,
+    deletePatients,
+    deleteMedics,
+    deleteClinicCases
+}

@@ -22,6 +22,8 @@ async function getClinicCaseByCaseNumber() {
   console.log(clinicCase)
 }
 
-getPatientByDni()
-getMedicByRegistrationNumber()
-getClinicCaseByCaseNumber()
+module.exports = {
+  getPatientByDni,
+  getMedicByRegistrationNumber,
+  getClinicCaseByCaseNumber
+}

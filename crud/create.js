@@ -83,6 +83,9 @@ const createCases = async () => {
     await caseTwo.save()
 }
 
-createPatients()
-createMedics()
-createCases()
+
+module.exports = {
+    createPatients,
+    createMedics,
+    createCases
+}

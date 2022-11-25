@@ -6,32 +6,47 @@ require('./connection')
 /**
  * Creacion de los esquemas y los casos de prueba
  */
-require('./crud/create')
+
+const create = require('./crud/create')
+create.createCases()
+create.createMedics()
+create.createPatients()
 
 /**
  * Busqueda de todos los elementos
  */
 setTimeout(() => {
-    require('./crud/find')
+    const find = require('./crud/find')
+    find.getPatients()
+    find.getMedics()
+    find.getCases()
 }, 1500);
 
 /**
  * Busqueda de un elemento por un criterio
  */
 setTimeout(() => {
-    require('./crud/findOne')
+    const findOne = require('./crud/findOne')
+    findOne.getClinicCaseByCaseNumber()
+    findOne.getMedicByRegistrationNumber()
+    findOne.getPatientByDni()
 }, 2000);
 
 /**
  * Actualizar un elemento manteniendo consistencia
  */
 setTimeout(() => {
-    require('./crud/update')
+    const update = require('./crud/update')
+    update.updateMedic()
+    update.updatePatient()
 }, 2500);
 
 /**
  * Eliminar todos los elementos o algunos segun un criterio
  */
 setTimeout(() => {
-    require('./crud/delete')
+    const deleteCrud = require('./crud/delete')
+    deleteCrud.deleteClinicCaseBy()
+    deleteCrud.deleteMedicBy()
+    deleteCrud.deletePatientBy()
 }, 3000);

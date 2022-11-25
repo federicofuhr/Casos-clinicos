@@ -44,5 +44,7 @@ async function updateMedic() {
   });
 }
 
-updatePatient()
-updateMedic()
+module.exports = {
+  updatePatient,
+  updateMedic
+}

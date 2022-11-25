@@ -22,6 +22,8 @@ async function getMedics() {
   console.log(medics);
 }
 
-getPatients()
-getMedics()
-getCases()
+module.exports = {
+  getPatients,
+  getMedics,
+  getCases
+}
