@@ -6,17 +6,21 @@ require('./connection')
 /**
  * Creacion de los esquemas y los casos de prueba
  */
-//require('./crud/create')
+require('./crud/create')
 
 /**
  * Busqueda de todos los elementos
  */
-require('./crud/find')
+setTimeout(() => {
+    require('./crud/find')
+}, 1500);
 
 /**
  * Busqueda de un elemento por un criterio
  */
-require('./crud/findOne')
+setTimeout(() => {
+    require('./crud/findOne')
+}, 2000);
 
 /**
  * Eliminar todos los elementos o algunos segun un criterio
