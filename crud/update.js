@@ -11,6 +11,14 @@ async function updatePatient() {
   const updatedPatient = await Patient.findOne({dni: 37257130})
   console.log("Paciente luego de actualizar su numero de telefono");
   console.log(updatedPatient)
+
+  const clinicCase = await ClinicCase.find({"patient.dni": 37257130})
+  
+  clinicCase.forEach(async (c) => {
+    await ClinicCase.update({caseNumber: c.caseNumber}, {
+      patient: updatedPatient
+    })
+  });
 }
 
 
