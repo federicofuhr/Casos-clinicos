@@ -102,7 +102,7 @@ const createCases = async () => {
         phone: "555 6969 555"
     })
 
-    /*const caseOne = new ClinicCase({
+    const caseOne = new ClinicCase({
         caseNumber: 001,
         date: new Date(),
         patient: patientTwo,
@@ -119,9 +119,9 @@ const createCases = async () => {
     })
 
     await caseOne.save()
-    await caseTwo.save()*/
+    await caseTwo.save()
 }
 
- /*createPatients()
- createMedics()*/
+ createPatients()
+ createMedics()
  createCases()

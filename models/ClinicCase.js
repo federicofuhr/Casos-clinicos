@@ -13,11 +13,11 @@ const clinicCaseSchema = new Schema({
         default: new Date()
     },
     patient: {
-        type: Patient,
+        type: Patient.schema,
         required: true
     },
     medics: {
-       type: [Medic]
+       type: [Medic.schema]
     },
     description: {
         type: String,
