@@ -6,7 +6,7 @@
 /**
  * Creacion de los esquemas y los casos de prueba
  */
-require('./crud/create')
+//require('./crud/create')
 
 /**
  * Busqueda de todos los elementos
