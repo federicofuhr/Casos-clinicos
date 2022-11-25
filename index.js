@@ -7,10 +7,12 @@ require('./connection')
  * Creacion de los esquemas y los casos de prueba
  */
 
+/*
 const create = require('./crud/create')
 create.createCases()
 create.createMedics()
 create.createPatients()
+*/
 
 /**
  * Busqueda de todos los elementos

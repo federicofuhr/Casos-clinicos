@@ -1,5 +1,3 @@
-require('../connection')
-
 const Patient = require('../models/Patient');
 const Medic = require('../models/Medic')
 const ClinicCase = require('../models/ClinicCase')
@@ -51,7 +49,7 @@ const patientTwo = new Patient({
 /* Funciones */
 
 const createPatients = async () => {
-   await patientOne.save()
+    await patientOne.save()
     await patientTwo.save()
 }
 
@@ -63,7 +61,7 @@ const createMedics = async () => {
 
 
 const createCases = async () => {
-   const caseOne = new ClinicCase({
+    const caseOne = new ClinicCase({
         caseNumber: 001,
         date: new Date(),
         patient: patientTwo,

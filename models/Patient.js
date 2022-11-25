@@ -9,7 +9,7 @@ const patientSchema = new Schema({
     completeName: {
         type: String,
         required: true
-    }, 
+    },
     birthday: {
         type: Date,
         default: new Date()

@@ -17,7 +17,7 @@ const clinicCaseSchema = new Schema({
         required: true
     },
     medics: {
-       type: [Medic.schema]
+        type: [Medic.schema]
     },
     description: {
         type: String,

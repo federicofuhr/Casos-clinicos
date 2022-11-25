@@ -1,5 +1,3 @@
-require("../connection");
-
 const Patient = require("../models/Patient");
 const Medic = require("../models/Medic");
 const Case = require("../models/ClinicCase");
