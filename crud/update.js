@@ -21,12 +21,15 @@ async function updateMedic() {
   const updatedMedic = await Medic.findOne({registrationNumber: 123456})
   console.log("Medico luego de actualizar su direccion");
   console.log(updatedMedic)
+  
 
   const clinicCase = await ClinicCase.find({"medics.registrationNumber": 123456})
   console.log("clinicCase impreso");
   console.log(clinicCase);
   
-  clinicCase.forEach(async (c, updatedMedic) => {
+  clinicCase.forEach(async (c) => {
+    console.log("Medico luego de actualizar su direccion (dentro de foreach)");
+    console.log(updatedMedic)
     await ClinicCase.update({caseNumber: c.caseNumber}, {
       $pull: {
         medics: {registrationNumber: updatedMedic.registrationNumber}
@@ -35,7 +38,7 @@ async function updateMedic() {
 
     await ClinicCase.update({caseNumber: c.caseNumber}, {
       $push: {
-        medics: {updatedMedic}
+        medics: updatedMedic
       }
     })
   });
