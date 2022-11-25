@@ -9,7 +9,7 @@ const createPatients = async () => {
     const patientOne = new Patient({
         dni: 37257130,
         completeName: "Juan Ignacio Barthes",
-        birthday: new Date(1994,01,06),
+        birthday: new Date(1994, 01, 06),
         age: 28,
         gender: "Hombre",
         address: "Avenida Colon 967",
@@ -18,7 +18,7 @@ const createPatients = async () => {
     const patientTwo = new Patient({
         dni: 38602822,
         completeName: "Mauro Valerioti",
-        birthday: new Date(1994,10,28),
+        birthday: new Date(1994, 10, 28),
         age: 28,
         gender: "Hombre Fitness",
         address: "Colon 1269",
@@ -38,7 +38,7 @@ const createMedics = async () => {
         phone: "555 444 54545",
         specialties: ["Cardiología"]
     })
-    
+
     const medicTwo = new Medic({
         registrationNumber: 123654,
         completeName: "Gonzalo Gonzalez",
@@ -59,7 +59,7 @@ const createMedics = async () => {
 }
 
 const createCases = async () => {
-    
+
     const medicOne = new Medic({
         registrationNumber: 123456,
         completeName: "Fernando Fernandez",
@@ -67,7 +67,7 @@ const createCases = async () => {
         phone: "555 444 54545",
         specialties: ["Cardiología"]
     })
-    
+
     const medicTwo = new Medic({
         registrationNumber: 123654,
         completeName: "Gonzalo Gonzalez",
@@ -85,7 +85,7 @@ const createCases = async () => {
     const patientOne = new Patient({
         dni: 37257130,
         completeName: "Juan Ignacio Barthes",
-        birthday: new Date(1994,01,06),
+        birthday: new Date(1994, 01, 06),
         age: 28,
         gender: "Hombre",
         address: "Avenida Colon 967",
@@ -94,7 +94,7 @@ const createCases = async () => {
     const patientTwo = new Patient({
         dni: 38602822,
         completeName: "Mauro Valerioti",
-        birthday: new Date(1994,10,28),
+        birthday: new Date(1994, 10, 28),
         age: 28,
         gender: "Hombre Fitness",
         address: "Colon 1269",
@@ -122,6 +122,6 @@ const createCases = async () => {
     await caseTwo.save()
 }
 
- createPatients()
- createMedics()
- createCases()
+createPatients()
+createMedics()
+createCases()
