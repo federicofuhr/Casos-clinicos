@@ -1,10 +1,36 @@
 require('../connection')
 
-const Product = require('../models/Product')
+const Patient = require("../models/Patient")
+const Medic = require("../models/Medic")
+const ClinicCase = require("../models/ClinicCase")
 
-const deleteAllProductsBy = async () => {
-    const result = await Product.deleteMany({name: 'keyboard'})
-    console.log(result)
+const deletePatientBy = async () => {
+    const result = await Patient.findOneAndDelete({dni: '38602822'})
 }
 
-deleteAllProductsBy()
+const deleteMedicBy = async () => {
+    const result = await Medic.findOneAndDelete({registrationNumber: '123654'})
+}
+
+const deleteClinicCaseBy = async () => {
+    const result = await ClinicCase.findOneAndDelete({caseNumber: '1'})
+}
+
+const deletePatients = async () => {
+    const result = await Patient.deleteMany()
+}
+
+const deleteMedics = async () => {
+    const result = await Medic.deleteMany()
+}
+
+const deleteClinicCases = async () => {
+    const result = await ClinicCase.deleteMany()
+}
+
+deletePatientBy()
+deleteMedicBy()
+deleteClinicCaseBy()
+deletePatients()
+deleteMedics()
+deleteClinicCases()
