@@ -21,6 +21,7 @@ async function getClinicCaseByCaseNumber() {
   console.log("Caso clinico encontrado por numero de caso");
   console.log(clinicCase)
 }
+
 getPatientByDni()
 getMedicByRegistrationNumber()
 getClinicCaseByCaseNumber()

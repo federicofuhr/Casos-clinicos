@@ -1,7 +1,7 @@
 /**
  * Conexion con la base de datos
  */
-//require('./connection')
+require('./connection')
 
 /**
  * Creacion de los esquemas y los casos de prueba
@@ -25,11 +25,13 @@ setTimeout(() => {
 /**
  * Actualizar un elemento manteniendo consistencia
  */
- setTimeout(() => {
-   require('./crud/update')
+setTimeout(() => {
+    require('./crud/update')
 }, 2500);
 
 /**
  * Eliminar todos los elementos o algunos segun un criterio
  */
-//require('./crud/delete')
+setTimeout(() => {
+    require('./crud/delete')
+}, 3000);
